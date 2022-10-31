@@ -17,7 +17,7 @@ class _LoginPageState extends State<LoginPage> {
           
           Container(
             // Background Utama
-          color: Color(0xff323334),
+          color:const Color(0xff323334),
           width: double.infinity,
             ),
             
@@ -27,11 +27,11 @@ class _LoginPageState extends State<LoginPage> {
               right: 50,
               
               child: Column(
-                children: [
-                  Align(
+                children:  [
+                  const Align(
                     alignment: Alignment.topLeft,
-                    child: Container(
-                      child:const Text('Login',
+                    child: SizedBox(
+                      child: Text('Login',
 
                       style: TextStyle(
                         color: Colors.white,
@@ -41,8 +41,9 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 30,),
+                  const SizedBox(height: 30),
                   Container(
+                    
                           
                           height: MediaQuery.of(context).size.height / 3.5,
                           width: MediaQuery.of(context).size.height / 3.0,
@@ -53,6 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
 
                   ),
+                  
                 ],
               ),
             ),
