@@ -11,30 +11,52 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey,
-        title: const Text('Login'),
-      ),
-      body: Column(
+      
+      body: Stack(
         children: [
+          
           Container(
-            height: 20,
-            width: double.infinity,
-            color: Colors.amber,
-          ),
-          const SizedBox(height: 10),
-          Container(
-            height: 20,
-            width: double.infinity,
-            color: Colors.green,
-          ),
-          const SizedBox(height: 10),
-          Container(
-            height: 20,
-            width: double.infinity,
-            color: Colors.red,
-          ),
-          const SizedBox(height: 10),
+            // Background Utama
+          color: Color(0xff323334),
+          width: double.infinity,
+            ),
+            
+            Positioned(
+              top: 200,
+              left: 50,
+              right: 50,
+              
+              child: Column(
+                children: [
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                      child:const Text('Login',
+
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 30,),
+                  Container(
+                          
+                          height: MediaQuery.of(context).size.height / 3.5,
+                          width: MediaQuery.of(context).size.height / 3.0,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffFF7F00),
+                            borderRadius: BorderRadius.circular(20)
+                            
+                          ),
+
+                  ),
+                ],
+              ),
+            ),
+          
         ],
       ),
     );
